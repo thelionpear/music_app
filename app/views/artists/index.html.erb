@@ -1,0 +1,15 @@
+<h1>Click an Artist To View Albums</h1>
+<%= link_to 'Create a new artist', new_artist_path %>
+<ul>
+  <% @artists.each do |artist| %>
+    <li><%= link_to artist.name, artist %></li>
+  <% end %>
+</ul>
+
+<hr />
+<p>What would you like to do?</p>
+<%= link_to 'View Albums', artist_albums_path(@artist) %>
+<br />
+<%= link_to 'Edit Artist', edit_artist_path(@artist) %>
+<br />
+<%= link_to 'Delete Artist', @artist, method: :delete %>

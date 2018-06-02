@@ -1,0 +1,7 @@
+<h1>Click a Song To View Contents</h1>
+<%= link_to 'Create a new song', new_song_path %>
+<ul>
+  <% @songs.each do |song| %>
+    <li><%= link_to song.name %></li>
+  <% end %>
+</ul>

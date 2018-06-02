@@ -1,0 +1,7 @@
+<h1>Click a Playlist To View Contents</h1>
+<%= link_to 'Create a new Playlist', new_playlist_path %>
+<ul>
+  <% @playlists.each do |playlist| %>
+    <li><%= link_to playlist.name %></li>
+  <% end %>
+</ul>
